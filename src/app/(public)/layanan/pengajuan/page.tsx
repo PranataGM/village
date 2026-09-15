@@ -157,7 +157,7 @@ export default function PengajuanSuratPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label>Jenis Surat</Label>
-                  <Select onValueChange={(v) => setFormData({...formData, jenis_surat: v})}>
+                  <Select onValueChange={(v) => setFormData({...formData, jenis_surat: v as string})}>
                     <SelectTrigger>
                       <SelectValue placeholder="Pilih Jenis Surat..." />
                     </SelectTrigger>
