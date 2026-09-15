@@ -31,7 +31,7 @@ export async function POST(req: Request) {
     const result = pendudukSchema.safeParse(body);
 
     if (!result.success) {
-      return NextResponse.json({ message: "Validasi gagal", errors: result.error.errors }, { status: 400 });
+      return NextResponse.json({ message: "Validasi gagal", errors: result.error.flatten() }, { status: 400 });
     }
 
     const { tgl_lahir, ...rest } = result.data;
