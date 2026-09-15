@@ -1,0 +1,128 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  SUPERADMIN
+  STAFF
+}
+
+enum StatusDasar {
+  HIDUP
+  MATI
+  PINDAH
+}
+
+enum JenisSurat {
+  DOMISILI
+  USAHA
+  TIDAK_MAMPU
+  PENGANTAR
+}
+
+enum StatusSurat {
+  PENDING
+  PROSES
+  REJECTED
+  DONE
+}
+
+enum KategoriAduan {
+  INFRASTRUKTUR
+  KEAMANAN
+  LINGKUNGAN
+  SOSIAL
+}
+
+enum StatusAduan {
+  UNREAD
+  READ
+  RESOLVED
+}
+
+enum TipeAPBDes {
+  PENDAPATAN
+  BELANJA
+  PEMBIAYAAN
+}
+
+model User {
+  id            String   @id @default(cuid())
+  username      String   @unique
+  password_hash String
+  role          Role
+  created_at    DateTime @default(now())
+}
+
+model Penduduk {
+  id             String           @id @default(cuid())
+  nik            String           @unique
+  no_kk          String
+  nama           String
+  tempat_lahir   String
+  tgl_lahir      DateTime
+  jenis_kelamin  String
+  agama          String
+  pendidikan     String
+  pekerjaan      String
+  alamat         String
+  rt             String
+  rw             String
+  dusun          String
+  status_dasar   StatusDasar
+  PengajuanSurat PengajuanSurat[]
+}
+
+model PengajuanSurat {
+  id               String      @id @default(cuid())
+  resi             String      @unique
+  pendudukId       String
+  penduduk         Penduduk    @relation(fields: [pendudukId], references: [id])
+  jenis_surat      JenisSurat
+  keperluan        String
+  data_tambahan    Json?
+  lampiran_ktp_url String
+  lampiran_kk_url  String
+  status           StatusSurat @default(PENDING)
+  alasan_tolak     String?
+  created_at       DateTime    @default(now())
+  updated_at       DateTime    @updatedAt
+}
+
+model Pengaduan {
+  id           String        @id @default(cuid())
+  nama_pelapor String?
+  kategori     KategoriAduan
+  deskripsi    String
+  bukti_url    String?
+  status       StatusAduan   @default(UNREAD)
+  created_at   DateTime      @default(now())
+}
+
+model Berita {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  judul         String
+  konten        String   @db.Text
+  thumbnail_url String?
+  authorId      String
+  is_published  Boolean  @default(false)
+  created_at    DateTime @default(now())
+}
+
+model APBDes {
+  id        String     @id @default(cuid())
+  tahun     Int
+  tipe      TipeAPBDes
+  kategori  String
+  nominal   Float
+  realisasi Float      @default(0)
+}
