@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-16 pb-16">
       {/* Hero Section */}
-      <section className="relative w-full h-[550px] bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-950 flex items-center justify-center overflow-hidden text-center text-white px-4">
+      <section className="relative w-full min-h-[calc(100vh-80px)] bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-950 flex items-center justify-center overflow-hidden text-center text-white px-4">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
         <div className="absolute inset-0 bg-black/20 z-10" />
         
-        <div className="relative z-20 max-w-4xl mx-auto space-y-8 mt-12">
+        <div className="relative z-20 max-w-4xl mx-auto space-y-8 mt-12 mb-20">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-800/50 border border-emerald-500/30 text-emerald-50 text-sm font-medium backdrop-blur-sm mb-4">
             <span className="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-pulse"></span>
             Portal Resmi Pemerintah Desa Muer
@@ -137,6 +137,33 @@ export default function Home() {
                 <p className="text-gray-600 line-clamp-3 text-base leading-relaxed">
                   Pemerintah Desa Muer resmi memulai proyek peningkatan fasilitas umum sebagai bagian dari optimalisasi APBDes tahun ini...
                 </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Potensi Desa / UMKM */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-12">
+        <div className="flex justify-between items-end mb-8">
+          <div>
+            <h2 className="text-4xl font-black text-gray-900">Potensi Desa & UMKM</h2>
+            <p className="text-gray-500 mt-2 text-lg">Mendukung karya lokal dan kekayaan alam Desa Muer.</p>
+          </div>
+          <Link href="/potensi" className="text-emerald-600 font-bold hover:text-emerald-700 hover:underline flex items-center text-lg transition-colors">
+            Lihat Semua <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {["Kerajinan Tangan", "Kopi Lokal Asli", "Wisata Alam", "Kain Tenun"].map((item, i) => (
+            <Card key={i} className="overflow-hidden border-none shadow-md rounded-2xl group cursor-pointer hover:-translate-y-1 transition-all duration-300">
+              <div className="h-48 bg-gray-200 overflow-hidden relative">
+                <div className="absolute inset-0 bg-emerald-900/10 group-hover:bg-transparent transition-colors z-10" />
+                <div className={`absolute inset-0 bg-[url('https://dummyimage.com/400x400/10b981/ffffff&text=${item.replace(' ', '+')}')] bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700`} />
+              </div>
+              <CardContent className="p-4 text-center">
+                <h3 className="font-bold text-gray-900 text-lg group-hover:text-emerald-600 transition-colors">{item}</h3>
               </CardContent>
             </Card>
           ))}

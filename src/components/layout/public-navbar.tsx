@@ -12,11 +12,13 @@ export function PublicNavbar() {
             </div>
             <Link href="/" className="text-2xl font-black text-gray-900 tracking-tight">Desa <span className="text-emerald-600">Muer</span></Link>
           </div>
-          <div className="hidden md:flex space-x-8 items-center">
+          <div className="hidden lg:flex space-x-6 items-center">
             <Link href="/" className="text-gray-600 hover:text-emerald-600 font-semibold transition-colors">Beranda</Link>
-            <Link href="/profil" className="text-gray-600 hover:text-emerald-600 font-semibold transition-colors">Profil Desa</Link>
-            <Link href="/data" className="text-gray-600 hover:text-emerald-600 font-semibold transition-colors">Data & Transparansi</Link>
-            <Link href="/layanan/pengajuan" className="text-gray-600 hover:text-emerald-600 font-semibold transition-colors">Layanan Surat</Link>
+            <Link href="/profil" className="text-gray-600 hover:text-emerald-600 font-semibold transition-colors">Profil</Link>
+            <Link href="/lembaga" className="text-gray-600 hover:text-emerald-600 font-semibold transition-colors">Lembaga</Link>
+            <Link href="/potensi" className="text-gray-600 hover:text-emerald-600 font-semibold transition-colors">Potensi & UMKM</Link>
+            <Link href="/data" className="text-gray-600 hover:text-emerald-600 font-semibold transition-colors">APBDes</Link>
+            <Link href="/layanan/pengajuan" className="text-gray-600 hover:text-emerald-600 font-semibold transition-colors">Layanan</Link>
             <Link href="/pengaduan" className="text-gray-600 hover:text-emerald-600 font-semibold transition-colors">Pengaduan</Link>
           </div>
           <div className="flex items-center space-x-4">
