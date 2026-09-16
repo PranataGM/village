@@ -106,7 +106,7 @@ export default function TransparansiDataPage() {
                     <tr key={i} className="bg-white border-b">
                       <td className="px-6 py-4 font-medium">{item.tipe}</td>
                       <td className="px-6 py-4">{item.kategori}</td>
-                      <td className="px-6 py-4 text-right text-blue-600 font-medium">Rp {item.nominal.toLocaleString()}</td>
+                      <td className="px-6 py-4 text-right text-emerald-600 font-medium">Rp {item.nominal.toLocaleString()}</td>
                       <td className="px-6 py-4 text-right text-green-600 font-medium">Rp {item.realisasi.toLocaleString()}</td>
                     </tr>
                   ))}

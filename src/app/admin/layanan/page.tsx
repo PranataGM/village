@@ -76,7 +76,7 @@ export default function LayananSuratAdminPage() {
   const getStatusBadge = (status: string) => {
     switch(status) {
       case 'PENDING': return <span className="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-xs font-bold">PENDING</span>;
-      case 'PROSES': return <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-bold">PROSES</span>;
+      case 'PROSES': return <span className="px-2 py-1 bg-emerald-100 text-emerald-800 rounded text-xs font-bold">PROSES</span>;
       case 'DONE': return <span className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-bold">DONE</span>;
       case 'REJECTED': return <span className="px-2 py-1 bg-red-100 text-red-800 rounded text-xs font-bold">REJECTED</span>;
       default: return null;
@@ -160,7 +160,7 @@ export default function LayananSuratAdminPage() {
                 <div>
                   <h4 className="text-sm font-semibold text-gray-500 mb-2">Ubah Status</h4>
                   <div className="flex flex-wrap gap-2">
-                    <Button variant="outline" size="sm" onClick={() => updateStatus(selected.id, "PROSES")} className="border-blue-500 text-blue-600 hover:bg-blue-50">
+                    <Button variant="outline" size="sm" onClick={() => updateStatus(selected.id, "PROSES")} className="border-emerald-500 text-emerald-600 hover:bg-emerald-50">
                       <Clock className="w-4 h-4 mr-1" /> Proses
                     </Button>
                     <Button variant="outline" size="sm" onClick={() => updateStatus(selected.id, "DONE")} className="border-green-500 text-green-600 hover:bg-green-50">

@@ -73,15 +73,15 @@ export default function CekStatusPage() {
       </Card>
 
       {data && (
-        <Card className="shadow-lg border-blue-100 overflow-hidden">
-          <CardHeader className="bg-blue-50 border-b border-blue-100 pb-6">
+        <Card className="shadow-lg border-emerald-100 overflow-hidden">
+          <CardHeader className="bg-emerald-50 border-b border-emerald-100 pb-6">
             <div className="flex justify-between items-start">
               <div>
-                <CardTitle className="text-2xl font-bold text-blue-900">Detail Pengajuan</CardTitle>
-                <CardDescription className="text-blue-700 mt-1">Resi: <span className="font-mono font-bold">{data.resi}</span></CardDescription>
+                <CardTitle className="text-2xl font-bold text-emerald-900">Detail Pengajuan</CardTitle>
+                <CardDescription className="text-emerald-700 mt-1">Resi: <span className="font-mono font-bold">{data.resi}</span></CardDescription>
               </div>
               {data.status === 'PENDING' && <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-bold flex items-center"><Clock className="w-4 h-4 mr-1"/> Menunggu</span>}
-              {data.status === 'PROSES' && <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold flex items-center"><Search className="w-4 h-4 mr-1"/> Diproses</span>}
+              {data.status === 'PROSES' && <span className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-bold flex items-center"><Search className="w-4 h-4 mr-1"/> Diproses</span>}
               {data.status === 'DONE' && <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-bold flex items-center"><CheckCircle2 className="w-4 h-4 mr-1"/> Selesai</span>}
               {data.status === 'REJECTED' && <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-bold flex items-center"><XCircle className="w-4 h-4 mr-1"/> Ditolak</span>}
             </div>

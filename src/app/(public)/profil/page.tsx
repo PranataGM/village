@@ -15,7 +15,7 @@ export default function ProfilPage() {
         <div className="lg:col-span-2 space-y-8">
           <section>
             <div className="flex items-center space-x-2 mb-4">
-              <History className="w-6 h-6 text-blue-600" />
+              <History className="w-6 h-6 text-emerald-600" />
               <h2 className="text-2xl font-bold">Sejarah Desa</h2>
             </div>
             <div className="prose max-w-none text-gray-600 leading-relaxed">
@@ -34,7 +34,7 @@ export default function ProfilPage() {
 
           <section>
             <div className="flex items-center space-x-2 mb-4">
-              <Target className="w-6 h-6 text-blue-600" />
+              <Target className="w-6 h-6 text-emerald-600" />
               <h2 className="text-2xl font-bold">Visi & Misi</h2>
             </div>
             <Card>
@@ -57,7 +57,7 @@ export default function ProfilPage() {
         <div className="space-y-8">
           <section>
             <div className="flex items-center space-x-2 mb-4">
-              <Users className="w-6 h-6 text-blue-600" />
+              <Users className="w-6 h-6 text-emerald-600" />
               <h2 className="text-2xl font-bold">Pemerintah Desa</h2>
             </div>
             <div className="grid gap-4">
@@ -66,7 +66,7 @@ export default function ProfilPage() {
                 <div className="w-16 h-16 bg-gray-200 rounded-full flex-shrink-0" />
                 <div>
                   <h4 className="font-bold">Budi Santoso</h4>
-                  <p className="text-sm text-blue-600">Kepala Desa</p>
+                  <p className="text-sm text-emerald-600">Kepala Desa</p>
                 </div>
               </div>
               {/* Sekdes */}
@@ -74,7 +74,7 @@ export default function ProfilPage() {
                 <div className="w-16 h-16 bg-gray-200 rounded-full flex-shrink-0" />
                 <div>
                   <h4 className="font-bold">Ahmad Fauzi</h4>
-                  <p className="text-sm text-blue-600">Sekretaris Desa</p>
+                  <p className="text-sm text-emerald-600">Sekretaris Desa</p>
                 </div>
               </div>
               {/* Kaur */}
@@ -82,7 +82,7 @@ export default function ProfilPage() {
                 <div className="w-16 h-16 bg-gray-200 rounded-full flex-shrink-0" />
                 <div>
                   <h4 className="font-bold">Siti Aminah</h4>
-                  <p className="text-sm text-blue-600">Kaur Keuangan</p>
+                  <p className="text-sm text-emerald-600">Kaur Keuangan</p>
                 </div>
               </div>
             </div>

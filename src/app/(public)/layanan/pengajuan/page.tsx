@@ -82,7 +82,7 @@ export default function PengajuanSuratPage() {
             <CheckCircle2 className="w-20 h-20 text-green-500" />
             <h2 className="text-2xl font-bold text-gray-800">Pengajuan Berhasil!</h2>
             <p className="text-gray-600">Simpan nomor resi berikut untuk melacak status pengajuan Anda:</p>
-            <div className="bg-gray-100 p-4 rounded-md font-mono text-2xl font-bold tracking-widest text-blue-700 w-full">
+            <div className="bg-gray-100 p-4 rounded-md font-mono text-2xl font-bold tracking-widest text-emerald-700 w-full">
               {resi}
             </div>
             <p className="text-sm text-gray-500">Anda dapat mengecek status kapan saja di halaman Cek Status.</p>
@@ -114,7 +114,7 @@ export default function PengajuanSuratPage() {
           {/* Step 1: Validasi NIK */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+              <div className="bg-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
               <h3 className="text-xl font-bold">Validasi Data Diri</h3>
             </div>
             <div className="flex space-x-2">
@@ -151,7 +151,7 @@ export default function PengajuanSuratPage() {
           {isValidated && (
             <div className="space-y-4 pt-4 border-t">
               <div className="flex items-center space-x-2">
-                <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
+                <div className="bg-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
                 <h3 className="text-xl font-bold">Detail Pengajuan</h3>
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -187,7 +187,7 @@ export default function PengajuanSuratPage() {
                   </div>
                 </div>
 
-                <Button type="submit" size="lg" className="w-full bg-blue-600 hover:bg-blue-700" disabled={loading}>
+                <Button type="submit" size="lg" className="w-full bg-emerald-600 hover:bg-emerald-700" disabled={loading}>
                   {loading ? "Memproses..." : "Ajukan Surat Sekarang"}
                 </Button>
               </form>

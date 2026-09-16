@@ -55,10 +55,10 @@ export default function PengaduanPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       <Card className="shadow-lg border-none">
-        <CardHeader className="text-center pb-8 border-b bg-blue-50">
-          <Megaphone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-          <CardTitle className="text-3xl font-bold text-blue-900">Lapor Warga</CardTitle>
-          <CardDescription className="text-blue-700 mt-2">
+        <CardHeader className="text-center pb-8 border-b bg-emerald-50">
+          <Megaphone className="w-12 h-12 text-emerald-600 mx-auto mb-4" />
+          <CardTitle className="text-3xl font-bold text-emerald-900">Lapor Warga</CardTitle>
+          <CardDescription className="text-emerald-700 mt-2">
             Punya keluhan, saran, atau menemukan infrastruktur yang rusak? Laporkan kepada kami di sini.
           </CardDescription>
         </CardHeader>
@@ -97,7 +97,7 @@ export default function PengaduanPage() {
                 onChange={(e) => setFormData({...formData, laporan: e.target.value})}
               />
             </div>
-            <Button type="submit" size="lg" className="w-full bg-blue-600 hover:bg-blue-700" disabled={loading}>
+            <Button type="submit" size="lg" className="w-full bg-emerald-600 hover:bg-emerald-700" disabled={loading}>
               {loading ? "Mengirim..." : "Kirim Laporan"}
             </Button>
           </form>

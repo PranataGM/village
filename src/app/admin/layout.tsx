@@ -30,7 +30,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         <header className="bg-white border-b p-4 flex justify-between items-center shadow-sm">
           <h1 className="text-xl font-semibold text-gray-800 hidden md:block">Panel Administrasi</h1>
           <div className="flex items-center space-x-4 ml-auto">
-            <div className="h-8 w-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">A</div>
+            <div className="h-8 w-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold">A</div>
             <span className="text-sm font-medium text-gray-700">Admin Desa</span>
           </div>
         </header>
